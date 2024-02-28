@@ -10,8 +10,8 @@ configurar o usuario local do git
 
 ```bash 
 
-git config --global user.name "Erick"
-git config --global user.email "erickverissimodasilva144@gmail.com"
+git config --global user.name "seu nome"
+git config --global user.email "seu email"
 
 fazer o clone do seu repositorio do github 
 
