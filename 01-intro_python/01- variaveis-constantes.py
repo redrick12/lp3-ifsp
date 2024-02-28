@@ -36,6 +36,8 @@ multiplas linhas
 
 #docstring (comentario de documentação)
 #documentar classe, modulos, funções, ...
+#docstring (comentario de documentação)
+#documentar classe, modulos, funções, ...
 
 def somar (numero1, numero2):
     '''
