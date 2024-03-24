@@ -16,7 +16,7 @@ ola_mundo()
 def imprimir_mensagem(nome):
     print(f"bom dia, {nome}")
 
-imprimir_mensagem(José)
+imprimir_mensagem("José")
 
 # Função com retorno
 # Função pura
@@ -27,10 +27,8 @@ print(mensagem('Maria'))
 # Enviar_email(mensagem('Maria))
 
 # Parâmetros e argumentos 
-def somar(numero1 + numero2):
-
-
-numero = 3.0
+def somar(numero1, numero2):
+    numero = 3.0
 
 # somar(10.0, somar(2, 3))
 # somar(10.0, 5)

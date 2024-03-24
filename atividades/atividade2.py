@@ -76,4 +76,35 @@ for candidato, votos in candidatos.items():
 
 
 #Ex05 
-palavra = str
+def verificar_palindromo (palavra):
+    palavra = palavra.lower()
+    if palavra == palavra [::-1]:
+        return True
+    else:
+        return False
+palavra = input ('Entre com uma palavra: ')
+if verificar_palindromo(palavra):
+        print("A palavra é um palíndromo.")
+else:
+        print("A palavra não é um palíndromo.")
+
+#Ex06
+
+def conversor_de_notas(nota):
+    if nota < 0 or nota > 100:
+        return 'Insira algo válido'
+    elif nota <= 20:
+        return 'A sua nota foi F'
+    elif nota <= 40:
+        return 'A sua nota foi D'
+    elif nota <= 60:
+        return 'A sua nota foi C'
+    elif nota <= 80:
+        return 'A sua nota foi B'
+    else:
+        return 'A sua nota foi A'
+
+nota = int(input('Insira uma nota: '))
+resultado = conversor_de_notas(nota)
+print(resultado)
+#ex07
