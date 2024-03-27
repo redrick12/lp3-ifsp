@@ -1,4 +1,5 @@
-#exercicio1
+#exercicio02
+
 numero_usuario = int 
 adivinhar = 5 
 print(' Tente adivinhar o numero estabelecido entre 0 a 100')
@@ -15,8 +16,6 @@ while numero_usuario!= adivinhar:
 
 
 #Ex02 
-
-
 numero = int (input("Escolha o número a ser multiplicado "))
 print(f'1x: {numero*1}')
 print(f'2x: {numero*2}')
@@ -107,4 +106,61 @@ def conversor_de_notas(nota):
 nota = int(input('Insira uma nota: '))
 resultado = conversor_de_notas(nota)
 print(resultado)
+
 #ex07
+
+def mostrar_forca(palavra, letras_corretas):
+    for letra in palavra:
+        if letra in letras_corretas:
+            print(letra, end=" ")
+        else:
+            print("_", end=" ")
+    print()
+
+def jogar_forca():
+    palavra = "python"
+    letras_corretas = []
+    tentativas = 6
+
+    print("Bem-vindo ao jogo da forca!")
+    print("Adivinhe a palavra:")
+
+    while tentativas > 0:
+        mostrar_forca(palavra, letras_corretas)
+        letra = input("Digite uma letra: ").lower()
+
+        if letra in letras_corretas:
+            print("Você já tentou essa letra.")
+            continue
+
+        if letra in palavra:
+            letras_corretas.append(letra)
+            if set(letras_corretas) == set(palavra):
+                print("Parabéns! Você venceu!")
+                print("A palavra era:", palavra)
+                break
+        else:
+            tentativas -= 1
+            print("Letra não encontrada. Você tem", tentativas, "tentativas restantes.")
+
+    if tentativas == 0:
+        print("Game over! A palavra era:", palavra)
+
+if __name__ == "__main__":
+    jogar_forca()
+
+#ex08
+def contar_palavras(frase):
+    palavras = frase.lower().split()
+    contagem = {}
+    for palavra in palavras:
+        contagem[palavra] = contagem.get(palavra, 0) + 1
+    return contagem
+while True:
+    texto = input("Digite uma frase (ou 'sair' para encerrar): ")
+    if texto.lower() == "sair":
+        break
+    resultado = contar_palavras(texto)
+    print("Contagem de palavras:")
+    for palavra, quantidade in resultado.items():
+        print(f"{palavra}: {quantidade}")
