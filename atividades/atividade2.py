@@ -1,4 +1,4 @@
-#exercicio02
+#exercicio01
 
 numero_usuario = int 
 adivinhar = 5 
